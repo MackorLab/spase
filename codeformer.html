@@ -9,18 +9,19 @@
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
 	
   <style>
-    body {
-  margin-bottom: 200px; /* увеличьте или уменьшите значение, чтобы настроить высоту закрытой части */
-  position: relative;
+body {
+  margin: 0;
+  padding-bottom: 50px;
 }
 
-.overlay {
+.over-layer {
   background-color: white;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px; /* увеличьте или уменьшите значение, чтобы настроить высоту закрытой части */
+  height: 50px;
+  z-index: 9999;
 }
   </style>
 </head>
