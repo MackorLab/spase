@@ -24,6 +24,11 @@
     background-color: black; /* Цвет области */
     opacity: 1; /* Непрозрачность области */
   }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+  }
 </style>
 </head>
 <body>
@@ -32,17 +37,17 @@
   vkBridge.send('VKWebAppInit');
 
   </script>
-    	
-
-
-
-
-
-    
+   <div class="code">
   <div class="overlay"></div>
-  <div class="code">
-    <iframe src="https://dmitrmakeev-codeformer.hf.space/" height="630" style="width: 100%;" scrolling="yes" title="ChatGPT" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+  <div class="wrapper">
+    <iframe src="https://dmitrmakeev-codeformer.hf.space" height="630" style="width: 100%;" scrolling="yes" title="ChatGPT" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
   </div>
+</div> 	
+
+
+
+
+
 
  
 </body>
