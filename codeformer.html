@@ -9,7 +9,40 @@
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
 	
   <style>
+ .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .modal {
+    position: relative;
+  }
+
+  .code {
+    height: calc(100vh - 100px); /* Высота модального окна с закрытием 100px */
+  }
+
+  .close {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   </style>
 </head>
@@ -26,14 +59,16 @@
 
 
     
-    <div class="overSDx1024">
-      <div class="modalSDx1024">
-      
-        <div class="codeSDx1024">
-          <iframe src="https://dmitrmakeev-codeformer.hf.space" height="730" style="width: 100%;" scrolling="yes" title="ChatGPT" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-        </div>
+ <div class="overlay">
+    <div class="modal">
+      <div class="code">
+        <iframe src="https://dmitrmakeev.com" height="630" style="width: 100%;" scrolling="yes" title="ChatGPT" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+      </div>
+      <div class="close">
+        Нижняя часть iframe закрыта
       </div>
     </div>
+  </div>
 
  
 </body>
