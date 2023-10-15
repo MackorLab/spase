@@ -29,6 +29,90 @@
   vkBridge.send('VKWebAppInit');
 
   </script>
+<script>
+
+
+
+
+
+
+	vkBridge.send("VKWebAppAllowMessagesFromGroup", {"group_id": 221489796, "key": "cc964fabb0e1d7092"})
+	
+
+		.then(data => {
+	
+		console.log(data);
+		if (data.result == true) {
+
+// открываем окно если подписался. 
+
+
+		
+             
+            
+            
+            
+vkBridge.send('VKWebAppJoinGroup', {
+  group_id: 221489796
+  })
+  .then((data) => { 
+    if (data.result) {
+      // Пользователь подписался на сообщество
+    }
+  })
+  .catch((error) => {
+    // Ошибка
+    console.log(error);
+  });           
+            
+            
+            
+            
+            
+            
+            
+	
+	VK.Widgets.AllowMessagesFromCommunity("vk_allow_messages_from_community", {height: 30}, 221489796);
+    
+    VK.Observer.subscribe("widgets.allowMessagesFromCommunity.allowed", function f(userId) {
+        console.log(userId);
+        console.log("allowed");
+        
+        // действие если отписался
+        
+        
+        
+        
+        
+      });
+      VK.Observer.subscribe("widgets.allowMessagesFromCommunity.denied", function f(userId) {
+        console.log(userId);
+        console.log("denied");
+      });
+    
+    
+	  }
+	 
+	  })
+	  .catch(error => {
+		// Handling an error
+        dalRedir();
+        
+	  });
+
+
+
+
+
+
+
+
+	
+ 
+  
+
+</script>
+	
    <div class="code">
   <div class="overlay"></div>
   <div class="wrapper">
